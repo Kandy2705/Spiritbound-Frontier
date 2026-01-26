@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 0a2830c9779c0ff41bfc8e238da68981
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8115914898443843970
+    second: _srw_free_farm_character_shovel_0
+  - first:
+      213: 8260575503466661578
+    second: _srw_free_farm_character_shovel_1
+  - first:
+      213: 8652177699103823137
+    second: _srw_free_farm_character_shovel_2
+  - first:
+      213: 3282668498012430913
+    second: _srw_free_farm_character_shovel_3
+  - first:
+      213: -4595788028960731172
+    second: _srw_free_farm_character_shovel_4
+  - first:
+      213: -553022066520400224
+    second: _srw_free_farm_character_shovel_5
+  - first:
+      213: -8285165726071068401
+    second: _srw_free_farm_character_shovel_6
+  - first:
+      213: -6104490884448637776
+    second: _srw_free_farm_character_shovel_7
+  - first:
+      213: -4541325591492507119
+    second: _srw_free_farm_character_shovel_8
+  - first:
+      213: -7759696401290342961
+    second: _srw_free_farm_character_shovel_9
+  - first:
+      213: -7919433996395454271
+    second: _srw_free_farm_character_shovel_10
+  - first:
+      213: 2794658673706909991
+    second: _srw_free_farm_character_shovel_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 695
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289bb05a99581a070800000000000000
+      internalID: 8115914898443843970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 695
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac68c6c67a573a270800000000000000
+      internalID: 8260575503466661578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 695
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125d3a0b6c5b21870800000000000000
+      internalID: 8652177699103823137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 599
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142656b4b916e8d20800000000000000
+      internalID: 3282668498012430913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_4
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 599
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf8dce132b7830c0800000000000000
+      internalID: -4595788028960731172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_5
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 599
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae591c4c554358f0800000000000000
+      internalID: -553022066520400224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 503
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09ea483bad250d80800000000000000
+      internalID: -8285165726071068401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_7
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 503
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc24d132ed784ba0800000000000000
+      internalID: -6104490884448637776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 503
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ac2bd7f68f9f0c0800000000000000
+      internalID: -4541325591492507119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_9
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 407
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd46345c35005490800000000000000
+      internalID: -7759696401290342961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 407
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c062be3db4881290800000000000000
+      internalID: -7919433996395454271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_character_shovel_11
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 407
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721c3cac14f98c620800000000000000
+      internalID: 2794658673706909991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      _srw_free_farm_character_shovel_0: 8115914898443843970
+      _srw_free_farm_character_shovel_1: 8260575503466661578
+      _srw_free_farm_character_shovel_10: -7919433996395454271
+      _srw_free_farm_character_shovel_11: 2794658673706909991
+      _srw_free_farm_character_shovel_2: 8652177699103823137
+      _srw_free_farm_character_shovel_3: 3282668498012430913
+      _srw_free_farm_character_shovel_4: -4595788028960731172
+      _srw_free_farm_character_shovel_5: -553022066520400224
+      _srw_free_farm_character_shovel_6: -8285165726071068401
+      _srw_free_farm_character_shovel_7: -6104490884448637776
+      _srw_free_farm_character_shovel_8: -4541325591492507119
+      _srw_free_farm_character_shovel_9: -7759696401290342961
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

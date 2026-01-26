@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: c869d1645e4cc7d48a7157971e6cf0e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2800331409668123854
+    second: _srw_free_farm_plants1_0
+  - first:
+      213: -6839327746554454308
+    second: _srw_free_farm_plants1_1
+  - first:
+      213: -6657415546866418321
+    second: _srw_free_farm_plants1_2
+  - first:
+      213: 2891498719050710485
+    second: _srw_free_farm_plants1_3
+  - first:
+      213: -5826118790995492546
+    second: _srw_free_farm_plants1_4
+  - first:
+      213: -2018105787280237937
+    second: _srw_free_farm_plants1_5
+  - first:
+      213: -7382712393779747810
+    second: _srw_free_farm_plants1_6
+  - first:
+      213: -3563161596651226391
+    second: _srw_free_farm_plants1_7
+  - first:
+      213: -130156360442877763
+    second: _srw_free_farm_plants1_8
+  - first:
+      213: -2999938431812028425
+    second: _srw_free_farm_plants1_9
+  - first:
+      213: 90725901203600002
+    second: _srw_free_farm_plants1_10
+  - first:
+      213: -8089871962507123156
+    second: _srw_free_farm_plants1_11
+  - first:
+      213: 3090589045141926652
+    second: _srw_free_farm_plants1_12
+  - first:
+      213: -101910220354249783
+    second: _srw_free_farm_plants1_13
+  - first:
+      213: 764007963565183488
+    second: _srw_free_farm_plants1_14
+  - first:
+      213: -4434006197706639560
+    second: _srw_free_farm_plants1_15
+  - first:
+      213: -2858665604881000100
+    second: _srw_free_farm_plants1_16
+  - first:
+      213: -1676259395373309268
+    second: _srw_free_farm_plants1_17
+  - first:
+      213: 750894283647887167
+    second: _srw_free_farm_plants1_18
+  - first:
+      213: 6489081578809781684
+    second: _srw_free_farm_plants1_19
+  - first:
+      213: -6000497338974402770
+    second: _srw_free_farm_plants1_20
+  - first:
+      213: 7733984049433990182
+    second: _srw_free_farm_plants1_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 686
+        width: 14
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc23ae8496ccd620800000000000000
+      internalID: 2800331409668123854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 683
+        width: 29
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde162c96a3d511a0800000000000000
+      internalID: -6839327746554454308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 683
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d3dd625db1c93a0800000000000000
+      internalID: -6657415546866418321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_3
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 698
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ddb381e3caa02820800000000000000
+      internalID: 2891498719050710485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 689
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e314c73e3d7752fa0800000000000000
+      internalID: -5826118790995492546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_5
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 683
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a50069a7f3ef3e0800000000000000
+      internalID: -2018105787280237937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_6
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 689
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1462e171365b8990800000000000000
+      internalID: -7382712393779747810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 683
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea3a42086b1d8ec0800000000000000
+      internalID: -3563161596651226391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 587
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db86b82da77913ef0800000000000000
+      internalID: -130156360442877763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_9
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 587
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f73dcff3e31e56d0800000000000000
+      internalID: -2999938431812028425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_10
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 587
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282fa29f9b2524100800000000000000
+      internalID: 90725901203600002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_11
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 593
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26ee54ef400bbf80800000000000000
+      internalID: -8089871962507123156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_12
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 593
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2f566ac5af3ea20800000000000000
+      internalID: 3090589045141926652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_13
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 593
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb9dccc131f59ef0800000000000000
+      internalID: -101910220354249783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 491
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0025fd9e13d4a9a00800000000000000
+      internalID: 764007963565183488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_15
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 491
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837b0d50bde3772c0800000000000000
+      internalID: -4434006197706639560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_16
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 491
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59d07937caf358d0800000000000000
+      internalID: -2858665604881000100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_17
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 497
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2ec5b06fabcb8e0800000000000000
+      internalID: -1676259395373309268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_18
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 497
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3724b06f56bb6a00800000000000000
+      internalID: 750894283647887167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_19
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 497
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdec77b059dd0a50800000000000000
+      internalID: 6489081578809781684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_20
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 401
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2701c25673f9bca0800000000000000
+      internalID: -6000497338974402770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _srw_free_farm_plants1_21
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 401
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624dc0d3481a45b60800000000000000
+      internalID: 7733984049433990182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      _srw_free_farm_plants1_0: 2800331409668123854
+      _srw_free_farm_plants1_1: -6839327746554454308
+      _srw_free_farm_plants1_10: 90725901203600002
+      _srw_free_farm_plants1_11: -8089871962507123156
+      _srw_free_farm_plants1_12: 3090589045141926652
+      _srw_free_farm_plants1_13: -101910220354249783
+      _srw_free_farm_plants1_14: 764007963565183488
+      _srw_free_farm_plants1_15: -4434006197706639560
+      _srw_free_farm_plants1_16: -2858665604881000100
+      _srw_free_farm_plants1_17: -1676259395373309268
+      _srw_free_farm_plants1_18: 750894283647887167
+      _srw_free_farm_plants1_19: 6489081578809781684
+      _srw_free_farm_plants1_2: -6657415546866418321
+      _srw_free_farm_plants1_20: -6000497338974402770
+      _srw_free_farm_plants1_21: 7733984049433990182
+      _srw_free_farm_plants1_3: 2891498719050710485
+      _srw_free_farm_plants1_4: -5826118790995492546
+      _srw_free_farm_plants1_5: -2018105787280237937
+      _srw_free_farm_plants1_6: -7382712393779747810
+      _srw_free_farm_plants1_7: -3563161596651226391
+      _srw_free_farm_plants1_8: -130156360442877763
+      _srw_free_farm_plants1_9: -2999938431812028425
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
