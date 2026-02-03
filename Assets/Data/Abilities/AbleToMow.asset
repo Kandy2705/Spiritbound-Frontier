@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ea649dd24586418b134c6c896f1c6, type: 3}
+  m_Name: AbleToMow
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: ab16131cc665cd34fb6a766b5e156ebc, type: 2}
+  - {fileID: 11400000, guid: 01eaaf4fe3f4e2b468c9051f8511fd91, type: 2}
+  - {fileID: 11400000, guid: 4429d348035bb384a92916ed4fbc9426, type: 2}
+  - {fileID: 11400000, guid: 1401d191c54313544862e5c3d5ba9e9c, type: 2}
+  plowable: 0
+  ableToMow: 1
+  ableToSeed: 0
+  waterable: 0
