@@ -15,8 +15,10 @@ MonoBehaviour:
   tiles:
   - {fileID: 11400000, guid: bb3585806e772374c8056242765f9e93, type: 2}
   noPlant: 1
-  withCorn: 0
-  withParsley: 0
-  withPotato: 0
-  withStrawberry: 0
-  withTomato: 0
+  planted: 0
+  collectible: 0
+  collectibleCorn: 0
+  collectibleParsley: 0
+  collectiblePotato: 0
+  collectibleStrawberry: 0
+  collectibleTomato: 0

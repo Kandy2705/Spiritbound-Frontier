@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
+using System;
 
 public class ToolsCharacterController : MonoBehaviour
 {
@@ -242,6 +243,7 @@ public class ToolsCharacterController : MonoBehaviour
         {
             TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
             TileData tileData = tileMapReadController.GetTileData(tileBase);
+            Debug.Log("Selected tile position: " + tileBase + tileData);
             //TileData cropData = cropsReadController.GetTileData(tileBase);
 
             /*if (toolbarController.GetItem.Name == "WateringCan" && fields[(Vector2Int)selectedTilePosition].watered) //if you are using watering can - play sound of water

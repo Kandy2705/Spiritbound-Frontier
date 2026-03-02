@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Seeds_Potato
   stackable: 1
-  icon: {fileID: 3771794143540122796, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  icon: {fileID: 8635903978712429406, guid: 82c8ecf54cdd52042b173e08e8540933, type: 3}
   isSeed: 1

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Seeds_Strawberry
   stackable: 1
-  icon: {fileID: 28957958560412503, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  icon: {fileID: -1268064389544249124, guid: 82c8ecf54cdd52042b173e08e8540933, type: 3}
   isSeed: 1
