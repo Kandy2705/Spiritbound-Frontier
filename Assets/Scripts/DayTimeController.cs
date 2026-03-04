@@ -71,10 +71,10 @@ public class DayTimeController : MonoBehaviour
             MoneyController.money += 200;
         }
 
-        if(day == 9 && time > 25200f)
-        {
-            Application.LoadLevel(4);
-        }
+        // if(day == 9 && time > 25200f)
+        // {
+        //     Application.LoadLevel(4);
+        // }
     }
 
 }
