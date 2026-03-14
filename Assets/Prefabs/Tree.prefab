@@ -34,6 +34,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8586638934766357472
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -52,6 +53,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73,9 +76,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1531631431
   m_SortingLayer: 1
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 9120211361127971695, guid: c8046358b94a183428968ac0d8d36b1e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9098039}
@@ -86,7 +91,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6441486036778209474
 GameObject:
@@ -122,6 +126,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8744869913220255987
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,6 +145,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -161,9 +168,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -869475469
   m_SortingLayer: 4
   m_SortingOrder: 1
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -3222322254821047183, guid: 1240751488bc089439dbed5034b0ea35,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9137255}
@@ -174,7 +183,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8055439594394878535
 GameObject:
@@ -186,7 +194,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8055439594394878533}
   - component: {fileID: 923654867114065739}
-  - component: {fileID: 799349060675870544}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -257,20 +264,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0495057, y: 1.8}
   m_EdgeRadius: 0
---- !u!114 &799349060675870544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8055439594394878535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e678a9c979f73418ae19c7d71fd360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpDrop: {fileID: 5768958560516096128, guid: 9a772c0602729ff4da15e756f82d729c,
-    type: 3}
-  dropCount: 5
-  spread: 0.7
-  hitCount: 0

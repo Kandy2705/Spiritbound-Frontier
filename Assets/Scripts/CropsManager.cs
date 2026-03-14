@@ -18,7 +18,7 @@ public class CropsManager : MonoBehaviour
     Dictionary<Vector2Int, TileData> fields = new Dictionary<Vector2Int, TileData>();
 
     public Dictionary<Vector3Int, Crop> crops;
-    //Crop crop;
+    Crop crop;
     public Dictionary<Vector3Int, Crop> corns;
     Crop corn;
     public Dictionary<Vector3Int, Crop> parsleys;
@@ -32,7 +32,7 @@ public class CropsManager : MonoBehaviour
 
     private void Awake()
     {
-        //crop = ScriptableObject.CreateInstance<Crop>();
+        crop = ScriptableObject.CreateInstance<Crop>();
         corn = ScriptableObject.CreateInstance<Crop>();
         parsley = ScriptableObject.CreateInstance<Crop>();
         potato = ScriptableObject.CreateInstance<Crop>();

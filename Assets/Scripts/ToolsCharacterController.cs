@@ -20,6 +20,7 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] TileData waterableTiles;
     InventoryController inventoryController;
     ToolbarController toolbarController;
+    [SerializeField] CropInfoDisplay cropInfoDisplay;
     [SerializeField] GameObject toolbarPanel;
 
     [SerializeField] float offsetDistance = 1f;
@@ -71,6 +72,9 @@ public class ToolsCharacterController : MonoBehaviour
         {
             if (!inventoryController.isOpen) //you can use tools only if inventory is closed
             {
+                if (cropInfoDisplay != null)
+                    cropInfoDisplay.Show(selectedTilePosition);
+
                 if (UseToolWorld() == true)
                 {
                     return;
