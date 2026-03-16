@@ -13,11 +13,13 @@ public class CropsManager : MonoBehaviour
     [SerializeField] TileBase invisible;
     [SerializeField] Tilemap groundTilemap;
     [SerializeField] Tilemap cropTilemap;
+    [SerializeField] GameObject cropObjectPrefab; 
     ToolbarController toolbarController;
 
     Dictionary<Vector2Int, TileData> fields = new Dictionary<Vector2Int, TileData>();
 
     public Dictionary<Vector3Int, Crop> crops;
+    public Dictionary<Vector3Int, GameObject> cropObjects;
     Crop crop;
     public Dictionary<Vector3Int, Crop> corns;
     Crop corn;
@@ -71,6 +73,7 @@ public class CropsManager : MonoBehaviour
         fields = ToolsCharacterController.fields;
 
         crops = new Dictionary<Vector3Int, Crop>();
+        cropObjects = new Dictionary<Vector3Int, GameObject>();
         corns = new Dictionary<Vector3Int, Crop>();
         parsleys = new Dictionary<Vector3Int, Crop>();
         potatoes = new Dictionary<Vector3Int, Crop>();
@@ -105,58 +108,88 @@ public class CropsManager : MonoBehaviour
         {
             cropSeeded = Instantiate(corn); //clone sample corn
             cropSeeded.position = position; //assign a position
-            cropSeeded.state = cropSeeded.state0; //assign initial state
+            cropSeeded.state = null; //clear legacy state
+            // cropSeeded.currentRenderer = null; //clear legacy renderer
             cropSeeded.timeRemaining = 120; //assign time to grow
+            cropSeeded.planted = true; //set planted to true
 
             crops.Add(position, cropSeeded); //add to dictionary of all crops
             corns.Add(position, cropSeeded); //add to dictionary of all corns
-            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0); //change a tile on tilemap with crops
+            
+            // Spawn object cây trồng thay vì đặt tile
+            SpawnCropObject(cropSeeded, position);
         }
         else if (name == "parsley")
         {
             cropSeeded = Instantiate(parsley);
-            cropSeeded.position = position;
-            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.position = position; //assign a position
+            cropSeeded.state = null; //clear legacy state
+            // cropSeeded.currentRenderer = null; //clear legacy renderer
             cropSeeded.timeRemaining = 60;
+            cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
             parsleys.Add(position, cropSeeded);
-            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+            SpawnCropObject(cropSeeded, position);
         }
         else if (name == "potato")
         {
             cropSeeded = Instantiate(potato);
-            cropSeeded.position = position;
-            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.position = position; //assign a position
+            cropSeeded.state = null; //clear legacy state
+            // cropSeeded.currentRenderer = null; //clear legacy renderer
             cropSeeded.timeRemaining = 90;
+            cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
             potatoes.Add(position, cropSeeded);
-            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+            SpawnCropObject(cropSeeded, position);
         }
         else if (name == "strawberry")
         {
             cropSeeded = Instantiate(strawberry);
-            cropSeeded.position = position;
-            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.position = position; //assign a position
+            cropSeeded.state = null; //clear legacy state
+            // cropSeeded.currentRenderer = null; //clear legacy renderer
             cropSeeded.timeRemaining = 90;
+            cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
             strawberries.Add(position, cropSeeded);
-            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+            SpawnCropObject(cropSeeded, position);
         }
         else if (name == "tomato")
         {
             cropSeeded = Instantiate(tomato);
-            cropSeeded.position = position;
-            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.position = position; //assign a position
+            cropSeeded.state = null; //clear legacy state
+            // cropSeeded.currentRenderer = null; //clear legacy renderer
             cropSeeded.timeRemaining = 60;
+            cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
             tomatoes.Add(position, cropSeeded);
-            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+            SpawnCropObject(cropSeeded, position);
         }
         groundTilemap.SetTile(position, toWater); //change a tile on tilemap with ground
+    }
+
+    void SpawnCropObject(Crop crop, Vector3Int position)
+    {
+        GameObject cropObj = Instantiate(cropObjectPrefab);
+        CropObject cropObjectScript = cropObj.GetComponent<CropObject>();
+        
+        if (cropObjectScript != null)
+        {
+            cropObjectScript.Initialize(crop, position, groundTilemap);
+            cropObjects.Add(position, cropObj);
+            crop.cropObject = cropObj;
+        }
+        else
+        {
+            Debug.LogError("CropObject prefab không có component CropObject!");
+            Destroy(cropObj);
+        }
     }
 
     string DisplayTime(float timeToDisplay)
@@ -171,7 +204,7 @@ public class CropsManager : MonoBehaviour
     {
         crops[position].timerIsRunning = true; //init a timer - plant can grow
         groundTilemap.SetTile(position, watered); //change a tile on tilemap with gorund
-        //Debug.Log(crops[position].timeRemaining);
+        Debug.Log($"Watered crop at {position.x}, {position.y}");
 
     }
 
@@ -189,21 +222,20 @@ public class CropsManager : MonoBehaviour
                 if (crop.name == "Parsley(Clone)") //parsley has less states of grow
                 {
                     //update state
-                    if (crop.state == crop.state0)
-                        crop.state = crop.state1;
-                    else if (crop.state == crop.state1)
-                        crop.state = crop.state2;
-                    else if (crop.state == crop.state2)
-                        crop.state = crop.state3;
-                    else if (crop.state == crop.state3)
-                        crop.state = crop.state4;
-
-                    cropTilemap.SetTile(crop.position, crop.state); //change a tile on tilemap with crops to next state
+                    CropObject cropObjInstance = null;
+                    if (crop.cropObject != null)
+                    {
+                        cropObjInstance = crop.cropObject.GetComponent<CropObject>();
+                        if (cropObjInstance != null)
+                        {
+                            cropObjInstance.GrowToNextState();
+                        }
+                    }
+                    
                     groundTilemap.SetTile(crop.position, toWater); //change a tile on tilemap with ground to waterable
 
-
                     crop.timerIsRunning = false; //timer stops counting
-                    if (crop.state != crop.state4)
+                    if (cropObjInstance != null && cropObjInstance.GetCurrentState() < 4)
                     {
                         crop.timeRemaining = 60; //time to next state
                     }
@@ -211,22 +243,20 @@ public class CropsManager : MonoBehaviour
                 else
                 {
                     //update state
-                    if (crop.state == crop.state0)
-                        crop.state = crop.state1;
-                    else if (crop.state == crop.state1)
-                        crop.state = crop.state2;
-                    else if (crop.state == crop.state2)
-                        crop.state = crop.state3;
-                    else if (crop.state == crop.state3)
-                        crop.state = crop.state4;
-                    else if (crop.state == crop.state4)
-                        crop.state = crop.state5;
-
-                    cropTilemap.SetTile(crop.position, crop.state); //change a tile on tilemap with crops to next state
+                    CropObject cropObjInstance = null;
+                    if (crop.cropObject != null)
+                    {
+                        cropObjInstance = crop.cropObject.GetComponent<CropObject>();
+                        if (cropObjInstance != null)
+                        {
+                            cropObjInstance.GrowToNextState();
+                        }
+                    }
+                    
                     groundTilemap.SetTile(crop.position, toWater); //change a tile on tilemap with ground to waterable
 
                     crop.timerIsRunning = false; //timer stops counting
-                    if (crop.state != crop.state5)
+                    if (cropObjInstance != null && cropObjInstance.GetCurrentState() < 5)
                     {
                         if (crop.name == "Corn(Clone)")
                             crop.timeRemaining = 120; //time to next state
@@ -248,36 +278,70 @@ public class CropsManager : MonoBehaviour
         //depending on what plant we want to collect
         if (name == "corn")
         {
-            cropTilemap.SetTile(position, invisible); //set tile on tilemap with crops to unplanted
+            // Hủy object cây trồng
+            if (cropObjects.ContainsKey(position))
+            {
+                Destroy(cropObjects[position]);
+                cropObjects.Remove(position);
+            }
             Destroy(corns[position]); //destroy object of corn
             corns.Remove(position); //remove element of dictionary with corns
         }
         else if (name == "parsley")
         {
-            cropTilemap.SetTile(position, invisible);
+            if (cropObjects.ContainsKey(position))
+            {
+                Destroy(cropObjects[position]);
+                cropObjects.Remove(position);
+            }
             Destroy(parsleys[position]);
             parsleys.Remove(position);
         }
         else if (name == "potato")
         {
-            cropTilemap.SetTile(position, invisible);
+            if (cropObjects.ContainsKey(position))
+            {
+                Destroy(cropObjects[position]);
+                cropObjects.Remove(position);
+            }
             Destroy(potatoes[position]);
             potatoes.Remove(position);
         }
         else if (name == "strawberry")
         {
-            cropTilemap.SetTile(position, invisible);
+            if (cropObjects.ContainsKey(position))
+            {
+                Destroy(cropObjects[position]);
+                cropObjects.Remove(position);
+            }
             Destroy(strawberries[position]);
             strawberries.Remove(position);
         }
         else if (name == "tomato")
         {
-            cropTilemap.SetTile(position, invisible);
+            if (cropObjects.ContainsKey(position))
+            {
+                Destroy(cropObjects[position]);
+                cropObjects.Remove(position);
+            }
             Destroy(tomatoes[position]);
             tomatoes.Remove(position);
         }
         crops.Remove(position); //remove element of dictionary with all crops
-        MoneyController.money += 20;
+        
+        // Thêm tiền theo từng loại cây
+        if (name == "corn")
+            MoneyController.money += (int)(100 * 1.3);  // Corn: 130 tiền
+        else if (name == "parsley")
+            MoneyController.money += (int)(30 * 1.3);  // Parsley: 39 tiền
+        else if (name == "potato")
+            MoneyController.money += (int)(110 * 1.3);  // Potato: 143 tiền
+        else if (name == "strawberry")
+            MoneyController.money += (int)(150 * 1.3);  // Strawberry: 195 tiền
+        else if (name == "tomato")
+            MoneyController.money += (int)(60 * 1.3);  // Tomato: 78 tiền
+        else
+            MoneyController.money += 20;  // Default: 20 tiền
 
         int texture = UnityEngine.Random.Range(0, 2); //random int - 0 or 1
         if (texture == 0)

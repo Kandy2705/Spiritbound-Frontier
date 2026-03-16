@@ -12,15 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Parsley
   m_EditorClassIdentifier: 
-  state0: {fileID: 11400000, guid: 466e6382193f660459895c6342a43e51, type: 2}
-  state1: {fileID: 11400000, guid: f5b6783d44a55d04182a4dc2668e6534, type: 2}
-  state2: {fileID: 11400000, guid: eb096d47a51c2f34497c9c23f37c7432, type: 2}
-  state3: {fileID: 11400000, guid: b4e7a60ddc9d78c4dbcb8e844c45758e, type: 2}
-  state4: {fileID: 11400000, guid: 67208945f274d3246ad87f9635fb7e32, type: 2}
-  state5: {fileID: 11400000, guid: 459e4e52f894ad349a5ada84a73c820c, type: 2}
+  stateSprites:
+  - {fileID: -440328263, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 2132640948, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 1112103802, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 1456464629, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -604154934, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -1195257835, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  stateScales:
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1.17, y: 1.17}
+  stateOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  cropSize: {x: 1, y: 1}
+  spriteOffset: {x: 0.53, y: 0.46}
   state: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
+  cropObject: {fileID: 8174940450071590059, guid: b5d18a3c8e3ab4fe983ba0fc33ce2e64,
+    type: 3}
   timeRemaining: 10
   timerIsRunning: 0
+  planted: 0
   timeText: {fileID: 0}
   Name: parsley

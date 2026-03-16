@@ -12,19 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
-  state0: {fileID: 8327668538466099862, guid: 4196f0a6318a442269e2dc3fd6e03a61, type: 3}
-  state1: {fileID: 8327668538466099862, guid: 505279ad7cbf94a7991652028ad02c29, type: 3}
-  state2: {fileID: 8327668538466099862, guid: 60d82e05026b74077861b6e67ddce34f, type: 3}
-  state3: {fileID: 8327668538466099862, guid: 6046d631f362a45f6b510a768d2739ba, type: 3}
-  state4: {fileID: 8327668538466099862, guid: 5642b03a5227d4bd691168ec70fcb0d2, type: 3}
-  state5: {fileID: 8327668538466099862, guid: 14c35927a5d7748e3b18ad124b4a33bb, type: 3}
-  cropSize: {x: 1, y: 2}
+  stateSprites:
+  - {fileID: 1352955200029874055, guid: 82c8ecf54cdd52042b173e08e8540933, type: 3}
+  - {fileID: 556522214, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 1909163100, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -847602462, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 70404416, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -764282631, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  stateScales:
+  - {x: 4.5, y: 4.5}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  stateOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0.34}
+  - {x: 0, y: 0.5}
+  - {x: 0, y: 0.7}
+  cropSize: {x: 1, y: 1}
   spriteOffset: {x: 0.53, y: 0.46}
-  currentRenderer: {fileID: 0}
   state: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
-  cropObject: {fileID: 0}
+  cropObject: {fileID: 8174940450071590059, guid: b5d18a3c8e3ab4fe983ba0fc33ce2e64,
+    type: 3}
   timeRemaining: 10
   timerIsRunning: 0
+  planted: 0
   timeText: {fileID: 0}
   Name: corn

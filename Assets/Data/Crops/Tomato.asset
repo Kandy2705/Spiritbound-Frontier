@@ -12,22 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Tomato
   m_EditorClassIdentifier: 
-  state0: {fileID: 11400000, guid: 90648e8e2b85a8f46acd94659a856a62, type: 2}
-  state1: {fileID: 11400000, guid: 4240f4fd12165fb43bef5991d343b467, type: 2}
-  state2: {fileID: 11400000, guid: 0e6466e8e77606c4197ac66dcf45b612, type: 2}
-  state3: {fileID: 11400000, guid: e769fc3a034a73d4fbd128f3557f5a3d, type: 2}
-  state4: {fileID: 11400000, guid: 87230d02a1c7a9a4a8cd6a29215b73c7, type: 2}
-  state5: {fileID: 11400000, guid: bd471a28033e6be4d994ab55cadeab4b, type: 2}
-  stages:
-  - {fileID: 11400000, guid: 90648e8e2b85a8f46acd94659a856a62, type: 2}
-  - {fileID: 11400000, guid: 4240f4fd12165fb43bef5991d343b467, type: 2}
-  - {fileID: 11400000, guid: 0e6466e8e77606c4197ac66dcf45b612, type: 2}
-  - {fileID: 11400000, guid: e769fc3a034a73d4fbd128f3557f5a3d, type: 2}
-  - {fileID: 11400000, guid: 87230d02a1c7a9a4a8cd6a29215b73c7, type: 2}
-  - {fileID: 11400000, guid: bd471a28033e6be4d994ab55cadeab4b, type: 2}
+  stateSprites:
+  - {fileID: 1694440075, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 597175600, guid: 125844310266f5a40ab653821c4b5ea6, type: 3}
+  - {fileID: -1655757592, guid: 125844310266f5a40ab653821c4b5ea6, type: 3}
+  - {fileID: -477745486, guid: 125844310266f5a40ab653821c4b5ea6, type: 3}
+  - {fileID: -1234294016, guid: 125844310266f5a40ab653821c4b5ea6, type: 3}
+  - {fileID: -2091739056, guid: 125844310266f5a40ab653821c4b5ea6, type: 3}
+  stateScales:
+  - {x: 1, y: 1}
+  - {x: 1.27, y: 1.27}
+  - {x: 1.27, y: 1.27}
+  - {x: 1.27, y: 1.27}
+  - {x: 1.27, y: 1.27}
+  - {x: 1.27, y: 1.27}
+  stateOffsets:
+  - {x: 0, y: 0}
+  - {x: 0.03, y: 0.27}
+  - {x: 0.03, y: 0.27}
+  - {x: -0.032, y: 0.17}
+  - {x: -0.032, y: 0.27}
+  - {x: -0.032, y: 0.27}
+  cropSize: {x: 1, y: 1}
+  spriteOffset: {x: 0.53, y: 0.46}
   state: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
+  cropObject: {fileID: 8174940450071590059, guid: b5d18a3c8e3ab4fe983ba0fc33ce2e64,
+    type: 3}
   timeRemaining: 10
   timerIsRunning: 0
+  planted: 0
   timeText: {fileID: 0}
   Name: tomato

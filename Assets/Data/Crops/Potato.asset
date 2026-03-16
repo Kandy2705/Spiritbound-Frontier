@@ -12,22 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
-  state0: {fileID: 11400000, guid: f74fab5af4e37d04eba4123aaf4ea18c, type: 2}
-  state1: {fileID: 11400000, guid: c8bf50d8b412f814bb34fa33c5fe8b7b, type: 2}
-  state2: {fileID: 11400000, guid: 7cb8a0b42c018c140b68086cdb7b5ee4, type: 2}
-  state3: {fileID: 11400000, guid: c312531477f3ed848b78af541930ae80, type: 2}
-  state4: {fileID: 11400000, guid: 37439744300fec943b85c8b4bef7bc08, type: 2}
-  state5: {fileID: 11400000, guid: 9f8b0edba3492254bae8630f40db1e9c, type: 2}
-  stages:
-  - {fileID: 11400000, guid: f74fab5af4e37d04eba4123aaf4ea18c, type: 2}
-  - {fileID: 11400000, guid: c8bf50d8b412f814bb34fa33c5fe8b7b, type: 2}
-  - {fileID: 11400000, guid: 7cb8a0b42c018c140b68086cdb7b5ee4, type: 2}
-  - {fileID: 11400000, guid: c312531477f3ed848b78af541930ae80, type: 2}
-  - {fileID: 11400000, guid: 37439744300fec943b85c8b4bef7bc08, type: 2}
-  - {fileID: 11400000, guid: 9f8b0edba3492254bae8630f40db1e9c, type: 2}
+  stateSprites:
+  - {fileID: -1619423513, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -1640179173, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -594065777, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -113409063, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -1811554344, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -1142809199, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  stateScales:
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  stateOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0.2}
+  - {x: 0, y: 0.35}
+  cropSize: {x: 1, y: 1}
+  spriteOffset: {x: 0.53, y: 0.46}
   state: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
+  cropObject: {fileID: 8174940450071590059, guid: b5d18a3c8e3ab4fe983ba0fc33ce2e64,
+    type: 3}
   timeRemaining: 10
   timerIsRunning: 0
+  planted: 0
   timeText: {fileID: 0}
   Name: potato

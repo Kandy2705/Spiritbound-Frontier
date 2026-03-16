@@ -9,26 +9,38 @@ using UnityEngine.UI;
 
 public class Crop : ScriptableObject
 {
-    public TileBase state0;
+    [Header("Crop Sprites")]
+    public Sprite[] stateSprites; 
+    public Vector2[] stateScales;
+    public Vector2[] stateOffsets;
 
-    public TileBase state1;
+    [Header("Crop Settings")]
+    public Vector2 cropSize = Vector2.one;
+    public Vector2 spriteOffset = Vector2.zero;
 
-    public TileBase state2;
-
-    public TileBase state3;
-
-    public TileBase state4;
-
-    public TileBase state5;
-
-    //public Tilemap cropTilemap;
-
-    public TileBase state;
+    // public SpriteRenderer currentRenderer;
+    public SpriteRenderer state; 
     public Vector3Int position;
+    public GameObject cropObject;
 
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
+    public bool planted = false;
     public Text timeText;
     public string Name;
-
+    
+    public Sprite GetStateSprite(int stateIndex)
+    {
+        return stateIndex >= 0 && stateIndex < stateSprites.Length ? stateSprites[stateIndex] : null;
+    }
+    
+    public Vector2 GetStateScale(int stateIndex)
+    {
+        return stateIndex >= 0 && stateIndex < stateScales.Length ? stateScales[stateIndex] : Vector2.one;
+    }
+    
+    public Vector2 GetStateOffset(int stateIndex)
+    {
+        return stateIndex >= 0 && stateIndex < stateOffsets.Length ? stateOffsets[stateIndex] : spriteOffset;
+    }
 }

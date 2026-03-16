@@ -12,22 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Strawberry
   m_EditorClassIdentifier: 
-  state0: {fileID: 11400000, guid: 86cb7153cbc51984bb14d240ed6e0d23, type: 2}
-  state1: {fileID: 11400000, guid: 589ca961d693ced43a8842a7da74aa07, type: 2}
-  state2: {fileID: 11400000, guid: 7ed5df4f870840d4d88fd78f3e1d3318, type: 2}
-  state3: {fileID: 11400000, guid: 662e4aadef9cbad4aa9c50699cf3b10c, type: 2}
-  state4: {fileID: 11400000, guid: 5beab1aa86ba57e439b4a3e01f4733d0, type: 2}
-  state5: {fileID: 11400000, guid: 091e1b1febe22574b840537a6253d916, type: 2}
-  stages:
-  - {fileID: 11400000, guid: 86cb7153cbc51984bb14d240ed6e0d23, type: 2}
-  - {fileID: 11400000, guid: 589ca961d693ced43a8842a7da74aa07, type: 2}
-  - {fileID: 11400000, guid: 7ed5df4f870840d4d88fd78f3e1d3318, type: 2}
-  - {fileID: 11400000, guid: 662e4aadef9cbad4aa9c50699cf3b10c, type: 2}
-  - {fileID: 11400000, guid: 5beab1aa86ba57e439b4a3e01f4733d0, type: 2}
-  - {fileID: 11400000, guid: 091e1b1febe22574b840537a6253d916, type: 2}
+  stateSprites:
+  - {fileID: -1268064389544249124, guid: 82c8ecf54cdd52042b173e08e8540933, type: 3}
+  - {fileID: -56336130, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -931397473, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 1077726224, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: -1191607766, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  - {fileID: 216195735, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
+  stateScales:
+  - {x: 4.5, y: 4.5}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  stateOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0.273}
+  - {x: 0, y: 0.273}
+  - {x: 0, y: 0.273}
+  cropSize: {x: 1, y: 1}
+  spriteOffset: {x: 0.53, y: 0.46}
   state: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
+  cropObject: {fileID: 8174940450071590059, guid: b5d18a3c8e3ab4fe983ba0fc33ce2e64,
+    type: 3}
   timeRemaining: 10
   timerIsRunning: 0
+  planted: 0
   timeText: {fileID: 0}
   Name: strawberry
