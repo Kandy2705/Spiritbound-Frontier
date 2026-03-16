@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
-  state0: {fileID: 11400000, guid: 70f9d904bd7a40546bdc37d5fef26f88, type: 2}
-  state1: {fileID: 11400000, guid: dc1fbd34106692d469a1adcef3967557, type: 2}
-  state2: {fileID: 11400000, guid: 5ec510b3d1254d14c869c80726b0855e, type: 2}
-  state3: {fileID: 11400000, guid: f537cf2d62ff427449e977ace6633a59, type: 2}
-  state4: {fileID: 11400000, guid: d6ff94e22d202fe4e8d706c40ca62dc8, type: 2}
-  state5: {fileID: 11400000, guid: ca9ebb65846e0bd46bff751ccb6747d4, type: 2}
-  state: {fileID: 11400000, guid: f87e44b1400e1de48884cc21d6166d47, type: 2}
+  state0: {fileID: 8327668538466099862, guid: 4196f0a6318a442269e2dc3fd6e03a61, type: 3}
+  state1: {fileID: 8327668538466099862, guid: 505279ad7cbf94a7991652028ad02c29, type: 3}
+  state2: {fileID: 8327668538466099862, guid: 60d82e05026b74077861b6e67ddce34f, type: 3}
+  state3: {fileID: 8327668538466099862, guid: 6046d631f362a45f6b510a768d2739ba, type: 3}
+  state4: {fileID: 8327668538466099862, guid: 5642b03a5227d4bd691168ec70fcb0d2, type: 3}
+  state5: {fileID: 8327668538466099862, guid: 14c35927a5d7748e3b18ad124b4a33bb, type: 3}
+  cropSize: {x: 1, y: 2}
+  spriteOffset: {x: 0.53, y: 0.46}
+  currentRenderer: {fileID: 0}
+  state: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
+  cropObject: {fileID: 0}
   timeRemaining: 10
   timerIsRunning: 0
   timeText: {fileID: 0}
