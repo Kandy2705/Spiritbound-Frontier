@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 	GameObject[] pauseObjects;
 	GameObject[] aboutObjects;
 	GameObject[] controlsObjects;
+	public GameObject pausePanel;
 
 	void Start()
 	{
@@ -64,6 +65,7 @@ public class UIManager : MonoBehaviour
 		{
 			g.SetActive(true);
 		}
+		pausePanel.SetActive(true);
 	}
 
 	public void hidePaused()
@@ -72,6 +74,7 @@ public class UIManager : MonoBehaviour
 		{
 			g.SetActive(false);
 		}
+		pausePanel.SetActive(false);
 	}
 
 	public void showControls()
