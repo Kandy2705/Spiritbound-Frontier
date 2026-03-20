@@ -48,7 +48,6 @@ public class ToolsCharacterController : MonoBehaviour
     UI_ShopController shopPanel;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         character = GetComponent<PlayerControl>();
@@ -62,7 +61,6 @@ public class ToolsCharacterController : MonoBehaviour
         shopPanel = shopPanelAll[0];
     }
 
-    // Update is called once per frame
     void Update()
     {
         SelectTile();
@@ -72,7 +70,6 @@ public class ToolsCharacterController : MonoBehaviour
         {
             if (!inventoryController.isOpen)
             {
-                // Tắt info panel khi nhấn chuột trái
                 if (cropInfoDisplay != null)
                     cropInfoDisplay.HideInfo();
                     
@@ -99,15 +96,6 @@ public class ToolsCharacterController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
         if (hit)
         {
-            //Debug.Log(hit.collider.gameObject.name);
-            if (hit.collider.gameObject.name.Contains("Tree"))
-            {
-                return true;
-            }
-            if (hit.collider.gameObject.name.Contains("CampFire"))
-            {
-                return true;
-            }
             if (hit.collider.gameObject.name.Contains("Chest"))
             {
                 return true;
@@ -200,15 +188,6 @@ public class ToolsCharacterController : MonoBehaviour
     private void CheckingIfHasEnoughSeeds(string toolName, string foodToolName, int pickUpCount)
     {                
         cropsManager.Collect(selectedTilePosition, toolName);
-        // foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
-        // {
-        //     if (itemSlot.item.Name == foodToolName)
-        //     {
-        //         GameManager.instance.inventoryContainer.Add(itemSlot.item, pickUpCount);
-        //         RefreshToolbar();
-        //         break;
-        //     }
-        // }
     }
 
     private void Marker()
@@ -216,37 +195,20 @@ public class ToolsCharacterController : MonoBehaviour
         markerManager.markedCellPosition = selectedTilePosition;
     }
 
-    // interacting with physical objects in the world
     private bool UseToolWorld()
     {
         if (Time.timeScale == 0)
             return false;
 
-        // CUTTING TREE
         Vector2 position = rgbd2d.position + character.lastMotionVector * offsetDistance;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
 
 
         foreach (Collider2D collidor in colliders)
         {
-            ToolHit hitTree = collidor.GetComponent<ToolHit>();
-            CampFireHit hitFire = collidor.GetComponent<CampFireHit>();
             ChestHit hitChest = collidor.GetComponent<ChestHit>();
             PlayerHit hitPlayer = collidor.GetComponent<PlayerHit>();
 
-            if (hitTree != null && toolbarController.GetItem != null &&
-                toolbarController.GetItem.Name == "Axe" && CastRay() == true)
-            {
-                hitTree.Hit();
-                // Debug.Log("we can hit");
-                return true;
-            }
-            if (hitFire != null && toolbarController.GetItem != null &&
-                toolbarController.GetItem.Name == "Wood" && CastRay() == true)
-            {
-                hitFire.Hit();
-                return true;
-            }
             if (hitChest != null && CastRay() == true)
             {
                 hitChest.Hit();
@@ -271,40 +233,30 @@ public class ToolsCharacterController : MonoBehaviour
 
     private void UseTool()
     {
-        if (Time.timeScale == 0) //if game paused - return
-            {
-                return;
-            }
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
 
-        // when sth is present on the grid but you can't plant there
         if (selectable == true && toolbarController.GetItem != null)
         {
             TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
             TileData tileData = tileMapReadController.GetTileData(tileBase);
             Debug.Log("Selected tile position: " + tileBase + tileData);
-            //TileData cropData = cropsReadController.GetTileData(tileBase);
 
-            /*if (toolbarController.GetItem.Name == "WateringCan" && fields[(Vector2Int)selectedTilePosition].watered) //if you are using watering can - play sound of water
-                FindObjectOfType<SoundManager>().Play("Water");*/
 
             if (tileData != plowableTiles && tileData != toMowTiles && tileData != toSeedTiles && tileData != waterableTiles) //if tile doesn't have any ability
             {
                 return;
             }
 
-            // Debug.Log("Wybrane narzędzie: " + toolbarController.GetItem.Name);
-            //Debug.Log(crops[(Vector2Int)selectedTilePosition]);
-            //if there is no plant on tile
-            // Kiểm tra từ CropsManager thay vì dictionary cũ
             bool hasCrop = cropsManager.crops.ContainsKey(selectedTilePosition);
             bool isPlanted = hasCrop && cropsManager.crops[selectedTilePosition].planted;
             bool isWaterable = fields[(Vector2Int)selectedTilePosition].waterable;
             bool isWateringCan = toolbarController.GetItem.Name == "WateringCan";
 
-            //if there is no plant on tile
             if (!hasCrop) 
             {
-                //usage of tools if tile has suitable ability
                 if (fields[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel" 
                     && shopPanel.isOpen == false)
                 {
@@ -335,12 +287,10 @@ public class ToolsCharacterController : MonoBehaviour
                         break;
                     }
 
-                    // Refreshing the count of seeds
                     RefreshToolbar();
                 }               
             }
 
-            //usage of tools if there is a planted tile
             else if (isPlanted && isWaterable && isWateringCan)
             {
                 Debug.Log("ket thuc tuoi nuoc");
@@ -350,7 +300,6 @@ public class ToolsCharacterController : MonoBehaviour
 
             else if (toolbarController.GetItem.Name == "Bag" && hasCrop)
             {
-                // Kiểm tra thu hoạch dựa vào CropObject state thay vì CropData tile cũ
                 Crop cropAtPos = cropsManager.crops[selectedTilePosition];
                 CropObject cropObj = null;
                 if (cropsManager.cropObjects.ContainsKey(selectedTilePosition))
