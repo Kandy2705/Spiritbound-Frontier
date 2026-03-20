@@ -22,7 +22,6 @@ public class CropInfoDisplay : MonoBehaviour
     
     void Update()
     {
-        // Cập nhật real-time khi đang hiển thị
         if (isShowing && cropsManager != null && cropsManager.crops.ContainsKey(currentCropPosition))
         {
             UpdateTimeDisplay();
@@ -58,22 +57,18 @@ public class CropInfoDisplay : MonoBehaviour
 
         Crop crop = cropsManager.crops[position];
 
-        // Hiển thị tên cây (bỏ "(Clone)" suffix)
         if (nameText != null)
         {
             string displayName = string.IsNullOrEmpty(crop.Name) ? crop.name.Replace("(Clone)", "").Trim() : crop.Name;
             nameText.text = "Name: " + displayName;
         }
 
-        // Cập nhật thời gian (sẽ được cập nhật real-time trong Update)
         UpdateTimeDisplay();
 
-        // Lấy sprite từ CropObject hiện tại (sprite của state hiện tại)
         if (cropImage != null)
         {
             Sprite currentSprite = null;
 
-            // Lấy CropObject tại vị trí này
             if (cropsManager.cropObjects.ContainsKey(position))
             {
                 GameObject cropObj = cropsManager.cropObjects[position];
@@ -85,7 +80,6 @@ public class CropInfoDisplay : MonoBehaviour
                 }
             }
 
-            // Fallback: lấy sprite từ stateSprites[0] nếu không tìm được
             if (currentSprite == null && crop.stateSprites != null && crop.stateSprites.Length > 0)
                 currentSprite = crop.stateSprites[0];
 
@@ -99,7 +93,6 @@ public class CropInfoDisplay : MonoBehaviour
                 cropImage.gameObject.SetActive(false);
             }
             
-            // Cập nhật thêm imageInfo nếu có
             if (imageInfo != null)
             {
                 Image infoImage = imageInfo.GetComponent<Image>();
@@ -116,7 +109,6 @@ public class CropInfoDisplay : MonoBehaviour
             panel.SetActive(false);
     }
     
-    // Tắt info panel khi nhấn ra ngoài
     public void HideInfo()
     {
         Hide();

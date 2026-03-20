@@ -17,7 +17,6 @@ public class PlayerControl : MonoBehaviour
     public Vector2 lastMotionVector;
     private Animator animator;
 
-    //Use this for initialization
     void Start()
     {
         currentState = PlayerState.walk;
@@ -29,7 +28,6 @@ public class PlayerControl : MonoBehaviour
 
     private void Awake()
     {
-        // Deleting all objects from the inventory
         foreach (ItemSlot itemSlot in GameManager.instance.inventoryContainer.slots)
         {
             if (itemSlot != null)
@@ -43,7 +41,6 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         vector = Vector3.zero;
@@ -87,7 +84,6 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
-    //Move character
     void Move()
     {
         myRigidbody2D.MovePosition(transform.position + vector * speed * Time.deltaTime);

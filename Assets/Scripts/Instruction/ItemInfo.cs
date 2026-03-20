@@ -9,5 +9,4 @@ public class ItemInfo : ScriptableObject
 {
     public Sprite icon;
     public string description;
-    public string itemName; // Thêm property cho tên item
 }

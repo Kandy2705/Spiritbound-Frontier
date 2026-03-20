@@ -8,14 +8,8 @@ using UnityEngine.Tilemaps;
 public class TileData : ScriptableObject
 {
     public List<TileBase> tiles;
-
     public bool plowable;
-
     public bool ableToMow;
-
     public bool ableToSeed;
-
     public bool waterable;
-
-    //public bool collectible;
 }
