@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     GameObject chest;
     public string[] sentences;
     private int index;
-    public Text textDisplay;
+    public TMP_Text textDisplay;
     public float typingSpeed;
     public GameObject pressToContinue;
 
@@ -26,7 +27,6 @@ public class DialogueManager : MonoBehaviour
         inventory = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("inventory"));
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         toolbar.SetActive(false);
@@ -38,10 +38,8 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
-        // Stopping random letters from appearing
         if (textDisplay.text == sentences[index] && dialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
             GoToNextSentence();
@@ -53,7 +51,6 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator Type()
     {
-        // Writing sentences in a certain speed
         foreach(char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
@@ -61,7 +58,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // Moving through sentences
     public void GoToNextSentence()
     {
         pressToContinue.SetActive(false);
