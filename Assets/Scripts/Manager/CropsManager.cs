@@ -110,7 +110,7 @@ public class CropsManager : MonoBehaviour
             cropSeeded.position = position; //assign a position
             cropSeeded.state = null; //clear legacy state
             // cropSeeded.currentRenderer = null; //clear legacy renderer
-            cropSeeded.timeRemaining = 120; //assign time to grow
+            cropSeeded.timeRemaining = cropSeeded.GetStageDuration(0); //assign time to grow
             cropSeeded.planted = true; //set planted to true
 
             crops.Add(position, cropSeeded); //add to dictionary of all crops
@@ -125,7 +125,7 @@ public class CropsManager : MonoBehaviour
             cropSeeded.position = position; //assign a position
             cropSeeded.state = null; //clear legacy state
             // cropSeeded.currentRenderer = null; //clear legacy renderer
-            cropSeeded.timeRemaining = 60;
+            cropSeeded.timeRemaining = cropSeeded.GetStageDuration(0);
             cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
@@ -138,7 +138,7 @@ public class CropsManager : MonoBehaviour
             cropSeeded.position = position; //assign a position
             cropSeeded.state = null; //clear legacy state
             // cropSeeded.currentRenderer = null; //clear legacy renderer
-            cropSeeded.timeRemaining = 90;
+            cropSeeded.timeRemaining = cropSeeded.GetStageDuration(0);
             cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
@@ -151,7 +151,7 @@ public class CropsManager : MonoBehaviour
             cropSeeded.position = position; //assign a position
             cropSeeded.state = null; //clear legacy state
             // cropSeeded.currentRenderer = null; //clear legacy renderer
-            cropSeeded.timeRemaining = 90;
+            cropSeeded.timeRemaining = cropSeeded.GetStageDuration(0);
             cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
@@ -164,7 +164,7 @@ public class CropsManager : MonoBehaviour
             cropSeeded.position = position; //assign a position
             cropSeeded.state = null; //clear legacy state
             // cropSeeded.currentRenderer = null; //clear legacy renderer
-            cropSeeded.timeRemaining = 60;
+            cropSeeded.timeRemaining = cropSeeded.GetStageDuration(0);
             cropSeeded.planted = true;
 
             crops.Add(position, cropSeeded);
@@ -219,54 +219,22 @@ public class CropsManager : MonoBehaviour
             }
             else
             {
-                if (crop.name == "Parsley(Clone)") //parsley has less states of grow
+                CropObject cropObjInstance = null;
+                if (crop.cropObject != null)
                 {
-                    //update state
-                    CropObject cropObjInstance = null;
-                    if (crop.cropObject != null)
+                    cropObjInstance = crop.cropObject.GetComponent<CropObject>();
+                    if (cropObjInstance != null)
                     {
-                        cropObjInstance = crop.cropObject.GetComponent<CropObject>();
-                        if (cropObjInstance != null)
-                        {
-                            cropObjInstance.GrowToNextState();
-                        }
-                    }
-                    
-                    groundTilemap.SetTile(crop.position, toWater); //change a tile on tilemap with ground to waterable
-
-                    crop.timerIsRunning = false; //timer stops counting
-                    if (cropObjInstance != null && cropObjInstance.GetCurrentState() < 4)
-                    {
-                        crop.timeRemaining = 60; //time to next state
+                        cropObjInstance.GrowToNextState();
                     }
                 }
-                else
-                {
-                    //update state
-                    CropObject cropObjInstance = null;
-                    if (crop.cropObject != null)
-                    {
-                        cropObjInstance = crop.cropObject.GetComponent<CropObject>();
-                        if (cropObjInstance != null)
-                        {
-                            cropObjInstance.GrowToNextState();
-                        }
-                    }
-                    
-                    groundTilemap.SetTile(crop.position, toWater); //change a tile on tilemap with ground to waterable
 
-                    crop.timerIsRunning = false; //timer stops counting
-                    if (cropObjInstance != null && cropObjInstance.GetCurrentState() < 5)
-                    {
-                        if (crop.name == "Corn(Clone)")
-                            crop.timeRemaining = 120; //time to next state
-                        if (crop.name == "Potato(Clone)")
-                            crop.timeRemaining = 90; //time to next state
-                        if (crop.name == "Strawberry(Clone)")
-                            crop.timeRemaining = 90; //time to next state
-                        if (crop.name == "Tomato(Clone)")
-                            crop.timeRemaining = 60; //time to next state
-                    }
+                groundTilemap.SetTile(crop.position, toWater); //change a tile on tilemap with ground to waterable
+
+                crop.timerIsRunning = false; //timer stops counting
+                if (cropObjInstance != null && crop.HasNextState(cropObjInstance.GetCurrentState()))
+                {
+                    crop.timeRemaining = crop.GetStageDuration(cropObjInstance.GetCurrentState());
                 }
 
             }
@@ -275,6 +243,8 @@ public class CropsManager : MonoBehaviour
 
     public void Collect(Vector3Int position, string name)
     {
+        Crop collectedCrop = crops.ContainsKey(position) ? crops[position] : null;
+
         //depending on what plant we want to collect
         if (name == "corn")
         {
@@ -329,19 +299,7 @@ public class CropsManager : MonoBehaviour
         }
         crops.Remove(position); //remove element of dictionary with all crops
         
-        // Thêm tiền theo từng loại cây
-        if (name == "corn")
-            MoneyController.money += (int)(100 * 1.3);  // Corn: 130 tiền
-        else if (name == "parsley")
-            MoneyController.money += (int)(30 * 1.3);  // Parsley: 39 tiền
-        else if (name == "potato")
-            MoneyController.money += (int)(110 * 1.3);  // Potato: 143 tiền
-        else if (name == "strawberry")
-            MoneyController.money += (int)(150 * 1.3);  // Strawberry: 195 tiền
-        else if (name == "tomato")
-            MoneyController.money += (int)(60 * 1.3);  // Tomato: 78 tiền
-        else
-            MoneyController.money += 20;  // Default: 20 tiền
+        MoneyController.money += collectedCrop != null ? collectedCrop.SellPrice : 20;
 
         int texture = UnityEngine.Random.Range(0, 2); //random int - 0 or 1
         if (texture == 0)

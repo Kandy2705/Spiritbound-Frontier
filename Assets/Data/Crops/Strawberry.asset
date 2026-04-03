@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Strawberry
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  description: 
   stateSprites:
   - {fileID: -1268064389544249124, guid: 82c8ecf54cdd52042b173e08e8540933, type: 3}
   - {fileID: -56336130, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
@@ -33,9 +35,12 @@ MonoBehaviour:
   - {x: 0, y: 0.273}
   - {x: 0, y: 0.273}
   - {x: 0, y: 0.273}
+  buyPrice: 150
+  sellPrice: 195
+  stateDurations: []
   cropSize: {x: 1, y: 1}
   spriteOffset: {x: 0.53, y: 0.46}
-  state: {fileID: 0}
+  state: {fileID: -2696968531839155382, guid: 403550f65689a0648ad061ce6cd919cb, type: 3}
   position: {x: 0, y: 0, z: 0}
   cropObject: {fileID: 8174940450071590059, guid: b5d18a3c8e3ab4fe983ba0fc33ce2e64,
     type: 3}

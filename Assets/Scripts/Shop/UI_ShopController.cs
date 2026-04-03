@@ -7,6 +7,7 @@ public class UI_ShopController : MonoBehaviour
 {
     private Transform container;
     private Transform shopItemTemplate;
+    private readonly Dictionary<string, Crop> cropsByKey = new Dictionary<string, Crop>();
     [SerializeField] private MoneyController money;
     public Button btn;
     [SerializeField] GameObject toolbarPanel;
@@ -23,12 +24,13 @@ public class UI_ShopController : MonoBehaviour
     {
 
         Dictionary<string, Sprite> plantsDictionary = CreateSeedsFromSprite();
+        CacheCropData();
 
-        CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 0, "Corn Seeds");
-        CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 30, 1, "Parsley Seeds");
-        CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", 60, 2, "Tomato Seeds");
-        CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", 150, 3, "Strawberry seeds");
-        CreateItemButton(plantsDictionary["Seeds_Potato"], "Seeds_Potato", 110, 4, "Potato tuber");
+        CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", "corn", 0, "Corn Seeds");
+        CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", "parsley", 1, "Parsley Seeds");
+        CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", "tomato", 2, "Tomato Seeds");
+        CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", "strawberry", 3, "Strawberry seeds");
+        CreateItemButton(plantsDictionary["Seeds_Potato"], "Seeds_Potato", "potato", 4, "Potato tuber");
 
         gameObject.SetActive(false);
         Hide();
@@ -48,8 +50,49 @@ public class UI_ShopController : MonoBehaviour
 
     }
 
-    private void CreateItemButton(Sprite itemSprite, string itemName, int itemCost, int positionIndex, string displayedName)
+    private void CacheCropData()
     {
+        cropsByKey.Clear();
+
+        if (GameManager.instance == null || GameManager.instance.allSeedsContainer == null)
+            return;
+
+        foreach (SeedSlot seedSlot in GameManager.instance.allSeedsContainer.slots)
+        {
+            if (seedSlot.item == null)
+                continue;
+
+            string key = seedSlot.item.ItemName.Trim().ToLowerInvariant();
+            if (!cropsByKey.ContainsKey(key))
+                cropsByKey.Add(key, seedSlot.item);
+        }
+    }
+
+    private int GetCropBuyPrice(string cropKey)
+    {
+        if (cropsByKey.TryGetValue(cropKey.Trim().ToLowerInvariant(), out Crop crop))
+            return crop.BuyPrice;
+
+        switch (cropKey.Trim().ToLowerInvariant())
+        {
+            case "corn":
+                return 100;
+            case "parsley":
+                return 30;
+            case "tomato":
+                return 60;
+            case "strawberry":
+                return 150;
+            case "potato":
+                return 110;
+            default:
+                return 0;
+        }
+    }
+
+    private void CreateItemButton(Sprite itemSprite, string itemName, string cropKey, int positionIndex, string displayedName)
+    {
+        int itemCost = GetCropBuyPrice(cropKey);
         Transform shopItemTransform = Instantiate(shopItemTemplate, container);
         RectTransform shopItemRectTransform = shopItemTransform.GetComponent<RectTransform>();
         float shopItemHeight = 60f;

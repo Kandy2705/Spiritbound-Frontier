@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Parsley
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  description: 
   stateSprites:
   - {fileID: -440328263, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
   - {fileID: 2132640948, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
@@ -33,9 +35,12 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
+  buyPrice: 30
+  sellPrice: 39
+  stateDurations: []
   cropSize: {x: 1, y: 1}
   spriteOffset: {x: 0.53, y: 0.46}
-  state: {fileID: 0}
+  state: {fileID: -1195257835, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
   position: {x: 0, y: 0, z: 0}
   cropObject: {fileID: 8174940450071590059, guid: b5d18a3c8e3ab4fe983ba0fc33ce2e64,
     type: 3}

@@ -18,12 +18,12 @@ public class ToolHotkeyController : MonoBehaviour
             return;
 
         // Z - Cây cuốc (Hoe)
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             SelectToolByName("Hoe");
         }
         // X - Cây xẻng (Shovel)
-        else if (Input.GetKeyDown(KeyCode.X))
+        else if (Input.GetKeyDown(KeyCode.Z))
         {
             SelectToolByName("Shovel");
         }
