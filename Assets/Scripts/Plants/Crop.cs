@@ -13,6 +13,7 @@ public class Crop : ItemInfo
     [Header("Handbook / Economy")]
     [SerializeField] private int buyPrice;
     [SerializeField] private int sellPrice;
+    [SerializeField, Min(0.1f)] private float defaultStageDuration = 60f;
     [SerializeField] private float[] stateDurations;
 
     [Header("Crop Settings")]
@@ -99,6 +100,9 @@ public class Crop : ItemInfo
 
     float GetDefaultStageDuration()
     {
+        if (defaultStageDuration > 0f)
+            return defaultStageDuration;
+
         switch (GetNormalizedKey())
         {
             case "corn":

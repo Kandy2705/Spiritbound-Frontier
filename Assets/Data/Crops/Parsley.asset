@@ -37,6 +37,7 @@ MonoBehaviour:
   - {x: 0, y: 0}
   buyPrice: 30
   sellPrice: 39
+  defaultStageDuration: 36
   stateDurations: []
   cropSize: {x: 1, y: 1}
   spriteOffset: {x: 0.53, y: 0.46}
